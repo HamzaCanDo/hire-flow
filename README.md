@@ -44,4 +44,12 @@ For zero-terminal setup, set a private `SETUP_TOKEN` in `.env`, then visit:
 `https://hamzaa.top/jobflow/setup-hireflow/YOUR_TOKEN`
 To also load demo accounts and listings, append `?seed=1`.
 
+Before deployment, install production Composer dependencies from the cPanel Terminal or from a local machine:
+
+```text
+composer install --no-dev --optimize-autoloader --no-interaction
+```
+
+cPanel Git deployment copies the project files to `/home/kitbinto/hamzaa.top/jobflow`; `.env`, `vendor/`, and local databases remain excluded from Git.
+
 The frontend is delivered through Tailwind and Alpine.js CDNs, so cPanel deployment does not require Node/npm or a build command.

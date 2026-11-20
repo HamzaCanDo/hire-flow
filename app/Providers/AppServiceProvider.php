@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (str_contains(config('app.url'), '/jobflow')) {
+        if (str_contains(config('app.url'), '/hireflow')) {
             URL::forceRootUrl(config('app.url'));
         }
     }

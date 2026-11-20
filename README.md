@@ -16,7 +16,7 @@ Demo accounts:
 
 ## cPanel deployment
 
-Upload this entire folder to `/home/kitbinto/hamzaa.top/jobflow`.
+Upload this entire folder to `/home/kitbinto/hamzaa.top/hireflow`.
 
 Edit `.env` with production values:
 
@@ -24,7 +24,7 @@ Edit `.env` with production values:
 APP_NAME=HireFlow
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://hamzaa.top/jobflow
+APP_URL=https://hamzaa.top/hireflow
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -41,7 +41,7 @@ QUEUE_CONNECTION=database
 Create the database and import this schema through phpMyAdmin or a migration tool. The root `.htaccess` blocks direct access to Laravel directories and rewrites public traffic into `public/`.
 
 For zero-terminal setup, set a private `SETUP_TOKEN` in `.env`, then visit:
-`https://hamzaa.top/jobflow/setup-hireflow/YOUR_TOKEN`
+`https://hamzaa.top/hireflow/setup-hireflow/YOUR_TOKEN`
 To also load demo accounts and listings, append `?seed=1`.
 
 Before deployment, install production Composer dependencies from the cPanel Terminal or from a local machine:
@@ -50,6 +50,6 @@ Before deployment, install production Composer dependencies from the cPanel Term
 composer install --no-dev --optimize-autoloader --no-interaction
 ```
 
-cPanel Git deployment copies the project files to `/home/kitbinto/hamzaa.top/jobflow`; `.env`, `vendor/`, and local databases remain excluded from Git.
+cPanel Git deployment copies the project files to `/home/kitbinto/hamzaa.top/hireflow`; `.env`, `vendor/`, and local databases remain excluded from Git.
 
 The frontend is delivered through Tailwind and Alpine.js CDNs, so cPanel deployment does not require Node/npm or a build command.

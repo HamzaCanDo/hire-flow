@@ -5,6 +5,6 @@
     RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor)(/|$) - [F,L]
     RewriteRule ^(artisan|composer\.json|composer\.lock|package\.json|package-lock\.json|vite\.config\.js|phpunit\.xml|\.cpanel\.yml)$ - [F,L]
 
-    RewriteCond %{REQUEST_URI} !^/jobflow/public/
+    RewriteCond %{REQUEST_URI} !^/hireflow/public/
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>

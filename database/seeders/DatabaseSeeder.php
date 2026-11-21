@@ -19,18 +19,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $employer = User::factory()->create([
+        $employer = User::updateOrCreate(
+            ['email' => 'employer@hireflow.test'],
+            [
             'name' => 'Morgan Lee',
-            'email' => 'employer@hireflow.test',
             'password' => Hash::make('password'),
             'role' => 'employer',
-        ]);
-        User::factory()->create([
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'candidate@hireflow.test'],
+            [
             'name' => 'Alex Candidate',
-            'email' => 'candidate@hireflow.test',
             'password' => Hash::make('password'),
             'role' => 'candidate',
-        ]);
+            ]
+        );
 
         $companies = [
             ['name' => 'Northstar Labs', 'industry' => 'Technology', 'location' => 'San Francisco, CA', 'size' => '51–200'],

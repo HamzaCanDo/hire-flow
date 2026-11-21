@@ -14,4 +14,5 @@ deployment:
     - /bin/cp -R tests $DEPLOYPATH/
     - /bin/cp artisan composer.json composer.lock package.json phpunit.xml vite.config.js $DEPLOYPATH/
     - /bin/cp .htaccess $DEPLOYPATH/
+    - /bin/cp index.php $DEPLOYPATH/
     - /bin/cp .env.example $DEPLOYPATH/

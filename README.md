@@ -16,7 +16,13 @@ Demo accounts:
 
 ## cPanel deployment
 
-Upload this entire folder to `/home/kitbinto/hamzaa.top/hireflow`.
+Deploy this application to `/home/kitbinto/hamzaa.top/hireflow_app`.
+
+Create this public symlink once:
+
+```bash
+ln -s /home/kitbinto/hamzaa.top/hireflow_app/public /home/kitbinto/hamzaa.top/hireflow
+```
 
 Edit `.env` with production values:
 
@@ -50,6 +56,6 @@ Before deployment, install production Composer dependencies from the cPanel Term
 composer install --no-dev --optimize-autoloader --no-interaction
 ```
 
-cPanel Git deployment copies the project files to `/home/kitbinto/hamzaa.top/hireflow`; `.env`, `vendor/`, and local databases remain excluded from Git.
+cPanel Git deployment copies the project files to `/home/kitbinto/hamzaa.top/hireflow_app`; `.env`, `vendor/`, and local databases remain excluded from Git.
 
 The frontend is delivered through Tailwind and Alpine.js CDNs, so cPanel deployment does not require Node/npm or a build command.

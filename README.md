@@ -18,10 +18,12 @@ Demo accounts:
 
 Deploy this application to `/home/kitbinto/hamzaa.top/hireflow_app`.
 
-Create this public symlink once:
+The recommended layout uses a real public folder rather than a symlink:
 
 ```bash
-ln -s /home/kitbinto/hamzaa.top/hireflow_app/public /home/kitbinto/hamzaa.top/hireflow
+unlink /home/kitbinto/hamzaa.top/hireflow
+mkdir -p /home/kitbinto/hamzaa.top/hireflow
+cp -R /home/kitbinto/hamzaa.top/hireflow_app/public/. /home/kitbinto/hamzaa.top/hireflow/
 ```
 
 Edit `.env` with production values:

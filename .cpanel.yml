@@ -2,7 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kitbinto/hamzaa.top/hireflow_app
+    - export PUBLICPATH=/home/kitbinto/hamzaa.top/hireflow
     - /bin/mkdir -p $DEPLOYPATH
+    - /bin/mkdir -p $PUBLICPATH
     - /bin/cp -R app $DEPLOYPATH/
     - /bin/cp -R bootstrap $DEPLOYPATH/
     - /bin/cp -R config $DEPLOYPATH/
@@ -16,3 +18,4 @@ deployment:
     - /bin/cp .htaccess $DEPLOYPATH/
     - /bin/cp index.php $DEPLOYPATH/
     - /bin/cp .env.example $DEPLOYPATH/
+    - /bin/cp -R public/. $PUBLICPATH/
